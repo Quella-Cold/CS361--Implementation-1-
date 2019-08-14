@@ -48,6 +48,7 @@ let users = {
 
 
 
+
 app.get('/', function(req, res, next) {
     res.redirect('login');
 });
@@ -84,6 +85,10 @@ app.post('/login', function(req, res, next){
 app.get('/home', function(req, res){
     let content = {'name':req.session.logged_in_userid};
     res.render('home', content)
+});
+
+app.get('/search', function(req, res){
+    res.render('search');
 });
 
 app.get('/logout', function(req, res, next) {
