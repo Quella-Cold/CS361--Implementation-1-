@@ -21,14 +21,15 @@
       <a href="#" class="w3-bar-item w3-button">Alert</a>
     </div>
   </div>
-  <div class="search-container w3-bar-item w3-hide-small w3-padding-large" id="searchbutton">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
+  <div class="search-container w3-bar-item w3-hide-small w3-padding-large">
+      <input id="searchinput" type="text" placeholder="Search.." name="search">
+      <button  id="searchbutton" type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
   <script>
       document.getElementById("searchbutton").addEventListener("click", function(){
-        window.location.href = "/search";
+        var caseNum = document.getElementById("searchinput").value;
+        window.location.href = "/search=" + caseNum;
       });
 
    </script>

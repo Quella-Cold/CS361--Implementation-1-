@@ -3,3 +3,22 @@
   color: white;
   margin-left: 40px;
 }
+
+.case_result{
+  height: 220px;
+  width: 220px;
+  font-size: 25px;
+  background-color: white;
+  border-radius: 20%;
+  margin-left: 160px;
+  padding-left: 15px;
+  padding-top: 2px;
+  opacity: 0.8;
+}
+
+.nr{
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  margin-top: 300px;
+}

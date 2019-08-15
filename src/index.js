@@ -46,6 +46,7 @@ let users = {
     }
 };
 
+var existCaseNum = [ "4533", "9976", "2314", "9304", "45667" ];
 
 
 
@@ -87,8 +88,14 @@ app.get('/home', function(req, res){
     res.render('home', content)
 });
 
-app.get('/search', function(req, res){
-    res.render('search');
+app.get('/search=:caseNum', function(req, res){
+    var caseNum = req.params.caseNum;
+    if(existCaseNum.includes(caseNum)){
+      res.render('search', { casenum: caseNum });
+    }
+    else {
+      res.render('no_result');
+    }
 });
 
 app.get('/logout', function(req, res, next) {
